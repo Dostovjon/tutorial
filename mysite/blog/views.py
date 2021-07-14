@@ -4,7 +4,7 @@ from .models import Post
 def post_list(request):
     posts = Post.objects.all()
     new = ''
-    qul = request.GET.get('m')
+    qul = request.GET.get('m', None)
     for q in qul:
         if 'А' == q:
             new += 'A'
